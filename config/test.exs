@@ -7,5 +7,6 @@ config :instruments,
   fast_counter_report_interval: 10,
   reporter_module: Instruments.Statix
 
-config :logger, compile_time_purge_level: :error, level: :error#, backends: []
+# , backends: []
+config :logger, compile_time_purge_matching: [[level_lower_than: :error]], level: :error
 config :statix, port: 15310
